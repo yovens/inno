@@ -1,0 +1,524 @@
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+   
+    background: url('../img/istockphoto-1314330053-612x612.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #63c782;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Ajoute un léger ombrage sur le fond */
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+ 
+
+/* Style global du pied de page */
+.footer {
+    background-color: #333;
+    color: #63c782 ;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur du pied de page */
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* Section des informations de l'entreprise */
+.footer-info {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Logo de l'entreprise */
+.footer-logo img {
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+/* Description de l'entreprise */
+.company-description {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Section des contacts */
+.footer-contact {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Titre "Contactez-nous" */
+.footer-contact h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Liens de contact */
+.footer-contact p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Section des réseaux sociaux */
+.footer-socials {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Titre "Suivez-nous" */
+.footer-socials h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Liste des réseaux sociaux */
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-socials ul li {
+    margin: 10px 0;
+}
+
+.footer-socials a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-socials a i {
+    margin-right: 10px;
+}
+
+/* Couleurs des icônes de réseaux sociaux */
+.footer-socials a:hover {
+    color:  #63c782;
+}
+
+/* Section des mentions légales et copyright */
+.footer-legal {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-legal p {
+    margin: 10px 0;
+}
+
+/* Liens des mentions légales et politique de confidentialité */
+.footer-legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info, .footer-contact, .footer-socials {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+/* Structure de l'en-tête */
+
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+/* Section introduction */
+.intro {
+    max-width: 50%;
+}
+
+.intro h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff6600;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+/* Image du téléphone */
+.phone-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+div img{
+    
+     cursor: pointer;
+     margin: 10px;
+     transition: 400ms;
+
+    }
+    div img:hover{
+   
+     transform: scale(1.03);
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section de contact */
+.contact {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #63c782;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button.submit-btn {
+    background-color:#63c782 ;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color:#63c782 ;
+}
+
+h2 {
+    font-size: 28px;
+    color:#63c782 ;
+    margin-top: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    color:#63c782 ;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    form {
+        gap: 15px;
+    }
+}
+
+
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.about {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 36px;
+    color:  #63c782;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    color: #63c782 ;
+    margin-top: 30px;
+}
+
+.about p {
+    font-size: 16px;
+    color:  #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about ul li {
+    font-size: 16px;
+    color:  #333;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+/* Structure de l'en-tête */
+
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+/* Section introduction */
+.intro {
+    max-width: 50%;
+}
+
+.intro h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff6600;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+/* Image du téléphone */
+.phone-image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
