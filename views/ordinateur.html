@@ -21,7 +21,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="dist/img/istockphoto-1221304514-612x612.jpg" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__wobble" src="../ChatGPT Image 19 mai 2025, 11_59_19.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -83,7 +83,7 @@
  
     <!-- Brand Logo -->
     <a href="about.html" class="brand-link">
-      <img src="dist/img/istockphoto-1221304514-612x612.jpg" alt="Inno Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="../ChatGPT Image 19 mai 2025, 11_59_19.png" alt="Inno Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Innov-Tek</span>
     </a>
 
@@ -289,100 +289,153 @@
 
 
 
-<div class="content-wrapper" >
+<div class="content-wrapper" style=" background: linear-gradient(135deg, #0099f7, #f11712);">
 
 
   <style>
     body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f5f5f5;
-        margin: 0;
-        padding: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
     }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
     }
+
     .card {
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        width: 300px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 220px;
+      overflow: hidden;
+      transition: transform 0.2s;
     }
+
     .card:hover {
-        transform: translateY(-10px);
+      transform: translateY(-5px);
     }
+
     .card img {
-        width: 100%;
-        height: auto;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
     }
+
     .card-content {
-        padding: 20px;
+      padding: 10px;
+      text-align: center;
     }
+
     .card-title {
-        font-size: 1.4em;
-        margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 5px;
     }
-    .card-desc {
-        color: #666;
-        font-size: 0.95em;
-        margin-bottom: 15px;
-    }
+
     .price {
-        font-size: 1.2em;
-        color: #ff4500;
+      color: #007bff;
+      font-weight: bold;
     }
-</style>
-<br>
-<br>
-<br>
-<h1 style="text-align:center">Nos Ordinateurs</h1>
+  </style>
+</head>
+<body>
+ <br>
+    <br>
+    <br>
+    
+    
 
-<div class="container" id="ordinateur-list"></div>
+  <h1>Nos Ordinateurs</h1>
 
-<script>
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Rechercher un ordinateur...">
+  </div>
+
+  <div class="container" id="ordinateur-list"></div>
+
+  <script>
     const ordinateurs = [
-        ['Apple MacBook Air', 900.00, 'istockphoto-1714941561-612x612.jpg'],
-        ['Dell XPS 13', 600.00, 'istockphoto-1564801989-612x612.jpg'],
-        ['HP Spectre x360', 800.00, 'istockphoto-1472521630-612x612.jpg'],
-        ['Lenovo ThinkPad X1 Carbon', 300.00, 'istockphoto-1354898870-612x612.jpg'],
-        ['Asus ZenBook 14', 700.00, 'istockphoto-1350795137-612x612.jpg'],
-        ['Microsoft Surface Laptop 5', 800.00, 'istockphoto-1292991882-612x612.jpg'],
-        ['Asus TUF Dash F15', 900.00, 'istockphoto-1285437590-612x612.jpg'],
-        ['Acer Swift 3', 500.00, 'istockphoto-1251629816-612x612.jpg'],
-        ['Razer Blade 15', 400.00, 'istockphoto-1140541722-612x612.jpg'],
-        ['Samsung Galaxy Book3 Pro', 300.00, 'istockphoto-155136879-612x612.jpg'],
-        ['LG Gram 17', 500.00, 'istockphoto-172277783-612x612.jpg'],
-        ['Microsoft Surface Laptop Go 3', 600.00, 'istockphoto-173239778-612x612.jpg'],
-        ['Gigabyte Aero 16', 700.00, 'istockphoto-174634535-612x612.jpg'],
-        ['MSI Prestige 14', 600.00, 'istockphoto-185094377-612x612.jpg'],
-        ['Huawei MateBook 14', 900.00, 'istockphoto-469943087-612x612.jpg'],
-        ['Apple MacBook Pro 14', 900.00, 'istockphoto-824197440-612x612.jpg'],
-        ['Samsung Galaxy Book2 Pro 360', 400.00, 'istockphoto-899369428-640x640.jpg']
-       
+      ['Apple MacBook Air', 900.00, 'istockphoto-1714941561-612x612.jpg'],
+      ['Dell XPS 13', 600.00, 'istockphoto-1564801989-612x612.jpg'],
+      ['HP Spectre x360', 800.00, 'istockphoto-1472521630-612x612.jpg'],
+      ['Lenovo ThinkPad X1 Carbon', 300.00, 'istockphoto-1354898870-612x612.jpg'],
+      ['Asus ZenBook 14', 700.00, 'istockphoto-1350795137-612x612.jpg'],
+      ['Microsoft Surface Laptop 5', 800.00, 'istockphoto-1292991882-612x612.jpg'],
+      ['Asus TUF Dash F15', 900.00, 'istockphoto-1285437590-612x612.jpg'],
+      ['Acer Swift 3', 500.00, 'istockphoto-1251629816-612x612.jpg'],
+      ['Razer Blade 15', 400.00, 'istockphoto-1140541722-612x612.jpg'],
+      ['Samsung Galaxy Book3 Pro', 300.00, 'istockphoto-155136879-612x612.jpg'],
+      ['LG Gram 17', 500.00, 'istockphoto-172277783-612x612.jpg'],
+      ['Microsoft Surface Laptop Go 3', 600.00, 'istockphoto-173239778-612x612.jpg'],
+      ['Gigabyte Aero 16', 700.00, 'istockphoto-174634535-612x612.jpg'],
+      ['MSI Prestige 14', 600.00, 'istockphoto-185094377-612x612.jpg'],
+      ['Huawei MateBook 14', 900.00, 'istockphoto-469943087-612x612.jpg'],
+      ['Apple MacBook Pro 14', 900.00, 'istockphoto-824197440-612x612.jpg'],
+      ['Samsung Galaxy Book2 Pro 360', 400.00, 'istockphoto-899369428-640x640.jpg']
     ];
 
     const container = document.getElementById('ordinateur-list');
+    const searchInput = document.getElementById('search');
 
-    ordinateurs.forEach(([nom, prix, image]) => {
-        const card = document.createElement('div');
-        card.className = 'card';
+    // Fonction de création de carte
+    function createCard(nom, prix, image) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${image}" alt="${nom}">
+        <div class="card-content">
+          <div class="card-title">${nom}</div>
+          <div class="price">${prix.toFixed(2)} €</div>
+        </div>
+      `;
+      return card;
+    }
 
-        card.innerHTML = `
-            <img src="${image}" alt="${nom}">
-            <div class="card-content">
-                <div class="card-title">${nom}</div>
-                <div class="price">${prix.toFixed(2)} €</div>
-            </div>
-        `;
+    // Fonction pour afficher les ordinateurs filtrés
+    function displayOrdinateurs(list) {
+      container.innerHTML = '';
+      list.forEach(([nom, prix, image]) => {
+        container.appendChild(createCard(nom, prix, image));
+      });
+    }
 
-        container.appendChild(card);
+    // Affichage initial
+    displayOrdinateurs(ordinateurs);
+
+    // Recherche dynamique
+    searchInput.addEventListener('input', () => {
+      const value = searchInput.value.toLowerCase();
+      const filtered = ordinateurs.filter(([nom]) =>
+        nom.toLowerCase().includes(value)
+      );
+      displayOrdinateurs(filtered);
     });
-</script>
+  </script>
+
 
 
   
@@ -391,7 +444,7 @@
         <div class="footer-info">
             <div class="footer-logo">
                  
-                <img src="../img/istockphoto-1221304514-612x612.jpg" alt="Logo de l'entreprise">
+                <img src="../ChatGPT Image 19 mai 2025, 11_59_19.png" alt="Logo de l'entreprise">
                 
             </div>
             <p class="company-description">
@@ -474,7 +527,7 @@ header{
 /* Style global du pied de page */
 .footer {
     background-color: #333;
-    color: #63c782 ;
+    color: blue ;
     padding: 40px 0;
     font-family: Arial, sans-serif;
 }
@@ -575,7 +628,7 @@ header{
 
 /* Couleurs des icônes de réseaux sociaux */
 .footer-socials a:hover {
-    color:  #63c782;
+    color:  blue;
 }
 
 /* Section des mentions légales et copyright */

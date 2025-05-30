@@ -21,7 +21,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__wobble" src="dist/img/istockphoto-1221304514-612x612.jpg" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__wobble" src="../ChatGPT Image 19 mai 2025, 11_59_19.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -83,7 +83,7 @@
  
     <!-- Brand Logo -->
     <a href="about.html" class="brand-link">
-      <img src="dist/img/istockphoto-1221304514-612x612.jpg" alt="Inno Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="../ChatGPT Image 19 mai 2025, 11_59_19.png" alt="Inno Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Innov-Tek</span>
     </a>
 
@@ -286,81 +286,19 @@
 
 
 
-
-
-
-<div class="content-wrapper" >
-
-
-  <style>
-
-
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card p {
-      margin-bottom: 15px;
-      font-weight: bold;
-      color: #ff4500;;
-    }
-
-
-
-
-
-
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f5f5f5;
-        margin: 0;
-        padding: 20px;
-    }
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-    .card {
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        width: 300px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-    }
-    .card:hover {
-        transform: translateY(-10px);
-    }
-    .card img {
-        width: 100%;
-        height: auto;
-    }
-    .card-content {
-        padding: 20px;
-    }
-    .card-title {
-        font-size: 1.4em;
-        margin-bottom: 10px;
-    }
-    .card-desc {
-        color: #666;
-        font-size: 0.95em;
-        margin-bottom: 15px;
-    }
-    .price {
-        font-size: 1.2em;
-        color: #ff4500;
-    }
-</style>
 <br>
 <br>
 <br>
 
+
+<div class="content-wrapper" style=" background: linear-gradient(135deg, #e53935, #e35d5b);">
+
+<h1 style="text-align:center">Nos Téléviseurs</h1>
+
+<!-- Barre de recherche -->
+<div style="text-align: center; margin: 20px;">
+    <input type="text" id="searchBar" placeholder="Rechercher un téléviseur..." style="width: 60%; padding: 10px; font-size: 16px;">
+</div>
 
 <div class="container" id="tv-list"></div>
 
@@ -378,7 +316,7 @@
     ['Téléviseur 3D', 450.99, 'istockphoto-1821997232-612x612.jpg'],
     ['Téléviseur avec écran incurvé', 350.99, 'istockphoto-1942371015-612x612.jpg'],
     ['Téléviseur avec Ambilight', 450.99, 'istockphoto-2084752084-612x612.jpg'],
-    ['Téléviseur 4K HDR ', 450.99, 'istockphoto-2091237204-612x612.jpg'],
+    ['Téléviseur 4K HDR', 450.99, 'istockphoto-2091237204-612x612.jpg'],
     ['Téléviseur 4K avec Dolby Atmos', 440.99, 'istockphoto-2143418748-612x612.jpg'],
     ['Téléviseur écran OLED flexible', 400.99, 'istockphoto-2157814038-612x612.jpg'],
     ['Téléviseur rétro.dynamique', 300.99, 'istockphoto-2166852994-612x612.jpg'],
@@ -389,25 +327,121 @@
   ];
 
   const container = document.getElementById('tv-list');
+  const searchBar = document.getElementById('searchBar');
 
-  televiseurs.forEach(([nom, prix, image]) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <img src="${image}" alt="${nom}">
-      <h3>${nom}</h3>
-      <p>${prix.toFixed(2)} €</p>
-    `;
-    container.appendChild(card);
+  function afficherTeleviseurs(liste) {
+    container.innerHTML = "";
+    liste.forEach(([nom, prix, image]) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${image}" alt="${nom}">
+        <div class="card-content">
+          <div class="card-title">${nom}</div>
+          <div class="price">${prix.toFixed(2)} €</div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  // Affichage initial
+  afficherTeleviseurs(televiseurs);
+
+  // Recherche dynamique
+  searchBar.addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const resultat = televiseurs.filter(([nom]) => nom.toLowerCase().includes(searchTerm));
+    afficherTeleviseurs(resultat);
   });
 </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 240px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: #555;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+
+
   
 <footer id="footer" class="footer">
     <div class="container">
         <div class="footer-info">
             <div class="footer-logo">
                  
-                <img src="../img/istockphoto-1221304514-612x612.jpg" alt="Logo de l'entreprise">
+                <img src="../ChatGPT Image 19 mai 2025, 11_59_19.png" alt="Logo de l'entreprise">
                 
             </div>
             <p class="company-description">
@@ -471,7 +505,7 @@ a{
 }
 
 a:hover {
-    color: #63c782;
+    color: blue;
 }
 header{
     position: relative;
@@ -490,7 +524,7 @@ header{
 /* Style global du pied de page */
 .footer {
     background-color: #333;
-    color: #63c782 ;
+    color: blue ;
     padding: 40px 0;
     font-family: Arial, sans-serif;
 }
@@ -591,7 +625,7 @@ header{
 
 /* Couleurs des icônes de réseaux sociaux */
 .footer-socials a:hover {
-    color:  #63c782;
+    color:  blue;
 }
 
 /* Section des mentions légales et copyright */
